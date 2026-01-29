@@ -1,30 +1,29 @@
 <odoo>
-    <data>
-        <!-- Template para la lista de productos -->
-        <template id="products_template" name="Lista de Productos">
-            <t t-call="website.layout">
-                <div class="container">
-                    <h2>Lista de Productos</h2>
-                    <table class="table table-striped">
-                        <thead> 
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Precio</th>
-                                <th>Cantidad Disponible</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <t t-foreach="products" t-as="product">
-                                <tr>
-                                    <td><t t-esc="product.name"/></td>
-                                    <td><t t-esc="product.list_price or 'N/A'"/></td>
-                                    <td><t t-esc="product.qty_available or 'N/A'"/></td>
-                                </tr>
-                            </t>
-                        </tbody>
-                    </table>
-                </div>
-            </t>
-        </template>
-    </data>
+<data>
+<template id="products_template" name="Lista de Productos">
+    <t t-call="website.layout">
+        <div class="container">
+            <h2>Lista de Productos</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad Disponible</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="products" t-as="product">
+                        <tr>
+                            <td><t t-esc="product.name"/></td>
+                            <td><t t-esc="product.list_price or 'N/A'"/></td>
+                            <td><t t-esc="product.qty_available or 'N/A'"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </t>
+</template>
+</data>
 </odoo>
