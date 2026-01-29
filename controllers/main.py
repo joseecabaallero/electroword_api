@@ -1,6 +1,8 @@
 from odoo import http
 from odoo.http import request
+
 class ElectroWordFrontend(http.Controller):
+
     @http.route('/products_page', type='http', auth='public', website=True)
     def products_page(self):
         """ Muestra una página con productos en el sitio web """
