@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <template id="customers_template" name="Lista de Clientes">
+            <t t-call="website.layout">
+                <div class="container">
+                    <h2>Lista de Clientes</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="customers" t-as="customer">
+                                <tr>
+                                    <td><t t-esc="customer.name"/></td>
+                                    <td><t t-esc="customer.email or 'N/A'"/></td>
+                                    <td><t t-esc="customer.phone or 'N/A'"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
