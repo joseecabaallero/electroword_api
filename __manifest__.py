@@ -2,7 +2,7 @@
     'name': 'ElectroWord API',
     'version': '1.0',
     'summary': 'API REST para obtener productos y clientes en Odoo',
-    'author': 'José David,
+    'author': 'José David',
     'category': 'API',
     'depends': ['base', 'sale', 'product', 'website'],
     'data': [
